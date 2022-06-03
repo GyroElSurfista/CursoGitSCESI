@@ -27,3 +27,19 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
     ![Anotando](Images/writing-down.png)
 
     Un commit es el registro de un cambio realizado en un determinado repositorio. Todo commit es realizado manualmente y debe incluir una breve explicación de lo sucedido.
+
+- ### Ramificar y Fusionar (Brach and Merge) 
+
+    ![Branching](Images/branching.png)
+
+    La ramificación y la fusión son una carácterística muy util de git pues permite el trabajo de manera paralela. Un repositorio está estructurado como un arbol que tiene diferentes ramas. La rama principal de este arbol es llamada master. A partir de cada rama se puden crear nuevas (al momento de crear una rama esta contiene todos los commits de su rama origen) estas ramas se pueden usar para desarrollar una carácteristica nueva, experimentar o también para independizar el trabajo de cada miembro del equipo de desarrollo, los cambios hechos en una rama no afectan a la origen. Las ramas existen para que en algún momento vuelvan a ser acopladas entre ellas, esta acción es denominada "fusión" o "merge", una fusión consiste en unir los cambios realizados en las ramas participantes.
+
+    #### Comandos para Ramificación y Fusión:
+
+    - git branch. - Permite ver el árbol del repositorio.
+
+    - git branch [ rama ]. - Crea la rama 'rama'
+
+    - git checkout [rama destino] Permite desplazarnos entre ramas.
+
+    - git merge [rama ]. - Permite fusionar la rama 'rama' a la actual.
