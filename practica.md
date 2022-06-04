@@ -2,15 +2,9 @@
 
 ## ¿Qué es Git?
 
-![Logo de Git](Images/gitlogo.png)
+<img src = "Images/gitlogo.png" width="588" height="200">
 
 Git es un sistema de control de versiones que permite registrar los diferentes cambios que se realizan en un proyecto.
-
-- ### Repositorio. - 
-
-    ![Directorio](Images/directory_icon.png)
-
-    Un repositorio es un directorio al cual Git le está haciendo seguimiento.
 
 - ### Areas
 
@@ -20,17 +14,30 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
         El staging area es aquel en el cual se agregan los archivos a los que se les quiere realizar un commit.
     3. #### Git area
         El git area es aquel en el cual se tienen almacenados todos los commits del repositorio.
+
         
+        
+
+
+- ### Repositorio. - 
+
+    <img src = "Images/directory_icon.png" width = "200" height = "200" >
+
+    Un repositorio es un directorio al cual Git le está haciendo seguimiento.
+
+
 
 - ### Commit. - 
 
-    ![Anotando](Images/writing-down.png)
+
+    <img src ="Images/writing-down.png" width = "240" height = "240">
 
     Un commit es el registro de un cambio realizado en un determinado repositorio. Todo commit es realizado manualmente y debe incluir una breve explicación de lo sucedido.
 
 - ### Ramificar y Fusionar (Brach and Merge) 
 
-    ![Branching](Images/branching.png)
+    <img src = "Images/branching.png" width = "410" height = "200">
+
 
     La ramificación y la fusión son una carácterística muy util de git pues permite el trabajo de manera paralela. Un repositorio está estructurado como un arbol que tiene diferentes ramas. La rama principal de este arbol es llamada master. A partir de cada rama se puden crear nuevas (al momento de crear una rama esta contiene todos los commits de su rama origen) estas ramas se pueden usar para desarrollar una carácteristica nueva, experimentar o también para independizar el trabajo de cada miembro del equipo de desarrollo, los cambios hechos en una rama no afectan a la origen. Las ramas existen para que en algún momento vuelvan a ser acopladas entre ellas, esta acción es denominada "fusión" o "merge", una fusión consiste en unir los cambios realizados en las ramas participantes.
 
