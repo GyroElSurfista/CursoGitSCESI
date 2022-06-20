@@ -15,10 +15,6 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
     3. #### Git area
         El git area es aquel en el cual se tienen almacenados todos los commits del repositorio.
 
-        
-        
-
-
 - ### Repositorio. - 
 
     <img src = "Images/directory_icon.png" width = "200" height = "200" >
@@ -34,7 +30,7 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
 
     Un commit es el registro de un cambio realizado en un determinado repositorio. Todo commit es realizado manualmente y debe incluir una breve explicación de lo sucedido.
 
-- ### Ramificar y Fusionar (Brach and Merge) 
+- ### Ramificar y Fusionar (Branch and Merge) 
 
     <img src = "Images/branching.png" width = "410" height = "200">
 
