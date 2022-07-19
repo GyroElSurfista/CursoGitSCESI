@@ -57,10 +57,22 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
 
     #### Comandos para Ramificación y Fusión:
 
+    ~~~~
     - git branch. - Permite ver el árbol del repositorio.
 
-    - git branch [ rama ]. - Crea la rama 'rama'
+    - git branch <rama>. - Crea la rama 'rama'
 
-    - git checkout [rama destino] Permite desplazarnos entre ramas.
+    - git checkout <rama destino> Permite desplazarnos entre ramas.
 
-    - git merge [rama ]. - Permite fusionar la rama 'rama' a la actual.
+    - git merge <rama>. - Permite fusionar la rama 'rama' a la actual.
+    ~~~~
+
+    #### Conflictos
+    Existen casos en los cuales un mismo archivo ha sido modificado en dos ramas diferentes, en este caso, al realizar la fusión de dichas ramas ocurrirá un conflicto. Los conflictos ocurren cuando Git no sabe cual de los cambios realizados al archivo en las diferentes ramas debe mantener y cuales debe descartar. Los conflictos pueden ser resueltos manualmente o se puede escoger priorizar la información de una rama en concreto al momento de realizar un merge.
+
+    Para priorizar los cambios de la rama actual al momento de realizar un merge se debe emplear el comando:
+
+    ~~~~
+    git merge -s ours
+    ~~~~
+
