@@ -1,45 +1,78 @@
-# Esta es la practica de la SCESI :D
+# Esta es la práctica de la SCESI :D
 
 ## ¿Qué es Git?
 
-![Logo de Git](Images/gitlogo.png)
+<img src = "Images/gitlogo.png" width="588" height="200">
 
 Git es un sistema de control de versiones que permite registrar los diferentes cambios que se realizan en un proyecto.
 
 - ### Repositorio. - 
 
-    ![Directorio](Images/directory_icon.png)
+    <img src = "Images/directory_icon.png" width = "200" height = "200" >
 
-    Un repositorio es un directorio al cual Git le está haciendo seguimiento.
+    Un repositorio es un directorio al cual Git le está haciendo seguimiento. Para que git realice dicha tarea, se debe dirigir a la carpeta en cuestión y utilizar el comando:
+    ~~~~
+    git init
+    ~~~~
+    
 
 - ### Areas
 
     1. #### Working area
-        El working area es aquel en el cual se manipulan los archivos.
+        El working area es aquel en el cual se manipulan los archivos (se realizan cambios).
     2. #### Staging area
-        El staging area es aquel en el cual se agregan los archivos a los que se les quiere realizar un commit.
+        El staging area es aquel en el cual se agregan los archivos a los que se les quiere realizar un commit. Para visualizar los cambios que aún no han sido enviados al Git area se debe emplear el comando:
+        ~~~~
+        git status
+        ~~~~
+        Si se desea visualizar cómo son exactamente los cambios que no se encuentran en el staging area respecto al último commit realizado, se debe emplear el comando:
+        ~~~~
+        git diff
+        ~~~~
+        Para enviar los cambios realizados al staging area se debe emplear el comando:
+        ~~~~
+        git add <nombre del archivo modificado>
+        ~~~~
     3. #### Git area
         El git area es aquel en el cual se tienen almacenados todos los commits del repositorio.
-        
 
 - ### Commit. - 
 
-    ![Anotando](Images/writing-down.png)
+    <img src ="Images/writing-down.png" width = "240" height = "240">
 
-    Un commit es el registro de un cambio realizado en un determinado repositorio. Todo commit es realizado manualmente y debe incluir una breve explicación de lo sucedido.
+    Un commit es el registro de un cambio realizado en un determinado repositorio. Todo commit es realizado manualmente y debe incluir una breve explicación de lo sucedido. El comando que debe emplearse 
+    para enviar un cambio desde el Staging area al Git area es:
+    ~~~~
+        git commit
+    ~~~~
 
-- ### Ramificar y Fusionar (Brach and Merge) 
+    Dicho comando mostrará un apartado en el cual se debe introducir una breve descripción del commit realizado.
 
-    ![Branching](Images/branching.png)
+- ### Ramificar y Fusionar (Branch and Merge) 
 
-    La ramificación y la fusión son una carácterística muy util de git pues permite el trabajo de manera paralela. Un repositorio está estructurado como un arbol que tiene diferentes ramas. La rama principal de este arbol es llamada master. A partir de cada rama se puden crear nuevas (al momento de crear una rama esta contiene todos los commits de su rama origen) estas ramas se pueden usar para desarrollar una carácteristica nueva, experimentar o también para independizar el trabajo de cada miembro del equipo de desarrollo, los cambios hechos en una rama no afectan a la origen. Las ramas existen para que en algún momento vuelvan a ser acopladas entre ellas, esta acción es denominada "fusión" o "merge", una fusión consiste en unir los cambios realizados en las ramas participantes.
+    <img src = "Images/branching.png" width = "410" height = "200">
+
+
+    La ramificación y la fusión son carácterísticas muy utiles de git pues permite el trabajo de manera paralela. Un repositorio está estructurado como un arbol que tiene diferentes ramas. La rama principal de este arbol es llamada master. A partir de cada rama se puden crear nuevas (al momento de crear una rama esta contiene todos los commits de su rama origen) estas ramas se pueden usar para desarrollar una carácteristica nueva, experimentar o también para independizar el trabajo de cada miembro del equipo de desarrollo, los cambios hechos en una rama no afectan a la origen. Las ramas existen para que en algún momento vuelvan a ser acopladas entre ellas, esta acción es denominada "fusión" o "merge", una fusión consiste en unir los cambios realizados en las ramas participantes.
 
     #### Comandos para Ramificación y Fusión:
 
+    ~~~~
     - git branch. - Permite ver el árbol del repositorio.
 
-    - git branch [ rama ]. - Crea la rama 'rama'
+    - git branch <rama>. - Crea la rama 'rama'
 
-    - git checkout [rama destino] Permite desplazarnos entre ramas.
+    - git checkout <rama destino> Permite desplazarnos entre ramas.
 
-    - git merge [rama ]. - Permite fusionar la rama 'rama' a la actual.
+    - git merge <rama>. - Permite fusionar la rama 'rama' a la actual.
+    ~~~~
+
+    #### Conflictos
+    Existen casos en los cuales un mismo archivo ha sido modificado en dos ramas diferentes, en este caso, al realizar la fusión de dichas ramas ocurrirá un conflicto. Los conflictos ocurren cuando Git no sabe cual de los cambios realizados al archivo en las diferentes ramas debe mantener y cuales debe descartar. Los conflictos pueden ser resueltos manualmente o se puede escoger priorizar la información de una rama en concreto al momento de realizar un merge.
+
+    Para priorizar los cambios de la rama actual al momento de realizar un merge se debe emplear el comando:
+
+    ~~~~
+    git merge -s ours
+    ~~~~
+
