@@ -1,4 +1,4 @@
-# Esta es la practica de la SCESI :D
+# Esta es la práctica de la SCESI :D
 
 ## ¿Qué es Git?
 
