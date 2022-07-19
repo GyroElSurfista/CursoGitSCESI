@@ -2,13 +2,13 @@
 
 ## ¿Qué es Git?
 
-<img src = "Images/gitlogo.png" width="588" height="200">
+<div align = "center"><img src = "Images/gitlogo.png" width="588" height="200"></div>
 
 Git es un sistema de control de versiones que permite registrar los diferentes cambios que se realizan en un proyecto.
 
 - ### Repositorio. - 
 
-    <img src = "Images/directory_icon.png" width = "200" height = "200" >
+    <div align = "center"><img src = "Images/directory_icon.png" width = "200" height = "200" ></div>
 
     Un repositorio es un directorio al cual Git le está haciendo seguimiento. Para que git realice dicha tarea, se debe dirigir a la carpeta en cuestión y utilizar el comando:
     ~~~~
@@ -42,7 +42,7 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
 
 - ### Commit. - 
 
-    <img src ="Images/writing-down.png" width = "240" height = "240">
+    <div align = "center"><img src ="Images/writing-down.png" width = "240" height = "240"></div>
 
     Un commit es el registro de un cambio realizado en un determinado repositorio. Todo commit es realizado manualmente y debe incluir una breve explicación de lo sucedido. El comando que debe emplearse 
     para enviar un cambio desde el Staging area al Git area es:
@@ -54,7 +54,7 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
 
 - ### Ramificar y Fusionar (Branch and Merge) 
 
-    <img src = "Images/branching.png" width = "410" height = "200">
+    <div align = "center"><img src = "Images/branching.png" width = "410" height = "200"></div>
 
 
     La ramificación y la fusión son carácterísticas muy utiles de git pues permite el trabajo de manera paralela. Un repositorio está estructurado como un arbol que tiene diferentes ramas. La rama principal de este arbol es llamada master. A partir de cada rama se puden crear nuevas (al momento de crear una rama esta contiene todos los commits de su rama origen) estas ramas se pueden usar para desarrollar una carácteristica nueva, experimentar o también para independizar el trabajo de cada miembro del equipo de desarrollo, los cambios hechos en una rama no afectan a la origen. Las ramas existen para que en algún momento vuelvan a ser acopladas entre ellas, esta acción es denominada "fusión" o "merge", una fusión consiste en unir los cambios realizados en las ramas participantes.
@@ -80,3 +80,11 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
     git merge -s ours
     ~~~~
 
+    #### Fast Forward
+    Sean las ramas rama1 y rama2 donde rama2 fue creada desde rama1. Si se realizan cambios en una y solamente una de las dos ramas, al momento de realizarse un merge no se creará un commit indicando el hecho pues existe un camino lineal directo desde la rama que no ha cambiado a la rama que si lo hizo.
+    <div align = "center"><img src = "Images/ff1.jpg" width = "400" height = "300"></div>
+    <div align = "center"> Dos ramas apuntando al mismo commit</div>
+    <div align = "center"><img src = "Images/ff2.jpg" width = "400" height = "300"></div>
+    <div align = "center"> Commits realizados en la rama "feature"</div>
+    <div align = "center"><img src = "Images/ff3.jpg" width = "400" height = "300"></div>
+    <div align = "center"> Fast Forward realizado al momento de hacer un merge</div>
