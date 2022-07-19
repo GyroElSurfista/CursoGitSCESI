@@ -33,6 +33,10 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
         ~~~~
         git add <nombre del archivo modificado>
         ~~~~
+        Para retirar algún cambio del staging area se puede usar le siguiente comando:
+        ~~~~
+        git reset <nombre del archivo modificado>
+        ~~~~ 
     3. #### Git area
         El git area es aquel en el cual se tienen almacenados todos los commits del repositorio.
 
