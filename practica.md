@@ -19,14 +19,16 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
 - ### Areas
 
     1. #### Working area
-        El working area es aquel en el cual se manipulan los archivos.
+        El working area es aquel en el cual se manipulan los archivos (se realizan cambios).
     2. #### Staging area
-        El staging area es aquel en el cual se agregan los archivos a los que se les quiere realizar un commit.
+        El staging area es aquel en el cual se agregan los archivos a los que se les quiere realizar un commit. Para enviar cambios realizados al staging area se debe emplear el comando:
+        ~~~~
+        git add <nombre del archivo modificado>
+        ~~~~
     3. #### Git area
         El git area es aquel en el cual se tienen almacenados todos los commits del repositorio.
 
 - ### Commit. - 
-
 
     <img src ="Images/writing-down.png" width = "240" height = "240">
 
