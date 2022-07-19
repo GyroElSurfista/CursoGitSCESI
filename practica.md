@@ -32,7 +32,13 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
 
     <img src ="Images/writing-down.png" width = "240" height = "240">
 
-    Un commit es el registro de un cambio realizado en un determinado repositorio. Todo commit es realizado manualmente y debe incluir una breve explicación de lo sucedido.
+    Un commit es el registro de un cambio realizado en un determinado repositorio. Todo commit es realizado manualmente y debe incluir una breve explicación de lo sucedido. El comando que debe emplearse 
+    para enviar un cambio desde el Staging area al Git area es:
+    ~~~~
+        git commit
+    ~~~~
+
+    Dicho comando mostrará un apartado en el cual se debe introducir una breve descripción del commit realizado.
 
 - ### Ramificar y Fusionar (Branch and Merge) 
 
