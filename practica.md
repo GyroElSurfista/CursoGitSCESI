@@ -6,6 +6,16 @@
 
 Git es un sistema de control de versiones que permite registrar los diferentes cambios que se realizan en un proyecto.
 
+- ### Repositorio. - 
+
+    <img src = "Images/directory_icon.png" width = "200" height = "200" >
+
+    Un repositorio es un directorio al cual Git le está haciendo seguimiento. Para que git realice dicha tarea, se debe dirigir a la carpeta en cuestión y utilizar el comando:
+    ~~~~
+    git init
+    ~~~~
+    
+
 - ### Areas
 
     1. #### Working area
@@ -14,14 +24,6 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
         El staging area es aquel en el cual se agregan los archivos a los que se les quiere realizar un commit.
     3. #### Git area
         El git area es aquel en el cual se tienen almacenados todos los commits del repositorio.
-
-- ### Repositorio. - 
-
-    <img src = "Images/directory_icon.png" width = "200" height = "200" >
-
-    Un repositorio es un directorio al cual Git le está haciendo seguimiento.
-
-
 
 - ### Commit. - 
 
