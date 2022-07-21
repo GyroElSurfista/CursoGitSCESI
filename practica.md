@@ -6,7 +6,7 @@
 
 Git es un sistema de control de versiones que permite registrar los diferentes cambios que se realizan en un proyecto.
 
-- ### Repositorio. - 
+- ### Repositorio 
 
     <div align = "center"><img src = "Images/directory_icon.png" width = "200" height = "200" ></div>
 
@@ -88,3 +88,31 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
     <div align = "center"> Commits realizados en la rama "feature"</div>
     <div align = "center"><img src = "Images/ff3.jpg" width = "400" height = "300"></div>
     <div align = "center"> Fast Forward realizado al momento de hacer un merge</div>
+
+- ### Flujos de trabajo 
+    
+    Un flujo de trabajo es un conjunto de reglas que se siguen para desarrollar un proyecto de manera ordenada y eficiente haciendo uso de Git.
+
+    - #### Basic workflow
+        Se usa solamente la rama master para realizar los diferentes commits, es recomendado para proyectos pequeños e individuales.
+    
+    - #### Feature branch workflow
+        Flujo de trabajo en el cual se establece una rama para cada carácteristica nueva que se encuentre en desarrollo, es recomendado para trabajar en conjunto con otras personas en proyectos pequeños.
+
+    - #### Gitflow workflow
+        Flujo de trabajo usado para el desarrollo de proyectos grandes, se caracteriza por definir unas ramas por defecto:
+
+        - ##### Main o Master
+            Rama en la que se ubican las versiones lanzadas al usuario final.
+        - ##### Hotfix
+            Rama empleada para la corrección de errores de las versiones lanzadas al publico, se integra a Develop y Master.
+        - ##### Release
+            Rama empleada para la aplicación de los últimos detalles al proyecto previo a un lanzamiento, se integra a Develop y Master.
+        - ##### Develop
+            Rama utilizada para el desarrollo de la aplicación.
+
+        - ##### Feature
+            Ramas (existe una rama Feature por cada caracteristica en desarrollo) empleadas para el desarrollo de una caracteristica, estas se integran a la rama Develop.
+    
+    - #### Forking workflow
+        Flujo de trabajo en el cual se realiza una 
