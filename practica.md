@@ -57,18 +57,18 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
     <div align = "center"><img src = "Images/branching.png" width = "410" height = "200"></div>
 
 
-    La ramificación y la fusión son carácterísticas muy utiles de git pues permite el trabajo de manera paralela. Un repositorio está estructurado como un arbol que tiene diferentes ramas. La rama principal de este arbol es llamada master. A partir de cada rama se puden crear nuevas (al momento de crear una rama esta contiene todos los commits de su rama origen) estas ramas se pueden usar para desarrollar una carácteristica nueva, experimentar o también para independizar el trabajo de cada miembro del equipo de desarrollo, los cambios hechos en una rama no afectan a la origen. Las ramas existen para que en algún momento vuelvan a ser acopladas entre ellas, esta acción es denominada "fusión" o "merge", una fusión consiste en unir los cambios realizados en las ramas participantes.
+    La ramificación y la fusión son carácterísticas muy utiles de git pues permiten el trabajo de manera paralela. Un repositorio está estructurado como un arbol que tiene diferentes ramas. La rama principal de este arbol es llamada Master. A partir de cada rama se pueden crear nuevas (al momento de crear una rama esta contiene todos los commits de su rama origen) estas ramas se pueden usar para desarrollar una carácteristica nueva, experimentar o también para independizar el trabajo de cada miembro del equipo de desarrollo, los cambios hechos en una rama no afectan a la origen. Las ramas existen para que en algún momento vuelvan a ser acopladas entre ellas, esta acción es denominada "fusión" o "merge", una fusión consiste en unir los cambios realizados en las ramas participantes.
 
     #### Comandos para Ramificación y Fusión:
 
     ~~~~
-    - git branch. - Permite ver el árbol del repositorio.
+    - git branch Permite ver el árbol del repositorio.
 
-    - git branch <rama>. - Crea la rama 'rama'
+    - git branch <rama> Crea la rama 'rama'
 
     - git checkout <rama destino> Permite desplazarnos entre ramas.
 
-    - git merge <rama>. - Permite fusionar la rama 'rama' a la actual.
+    - git merge <rama> Permite fusionar la rama 'rama' a la actual.
     ~~~~
 
     #### Conflictos
@@ -84,10 +84,17 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
     Sean las ramas rama1 y rama2 donde rama2 fue creada desde rama1. Si se realizan cambios en una y solamente una de las dos ramas, al momento de realizarse un merge no se creará un commit indicando el hecho pues existe un camino lineal directo desde la rama que no ha cambiado a la rama que si lo hizo.
     <div align = "center"><img src = "Images/ff1.jpg" width = "400" height = "300"></div>
     <div align = "center"> Dos ramas apuntando al mismo commit</div>
+
     <div align = "center"><img src = "Images/ff2.jpg" width = "400" height = "300"></div>
     <div align = "center"> Commits realizados en la rama "feature"</div>
+
     <div align = "center"><img src = "Images/ff3.jpg" width = "400" height = "300"></div>
     <div align = "center"> Fast Forward realizado al momento de hacer un merge</div>
+
+    Para que un merge no se realice con fast forward, se puede emplear el comando siguiente:
+    ~~~~
+    git merge --no-ff <rama>
+    ~~~~
 
 - ### Flujos de trabajo 
     
@@ -104,7 +111,7 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
         <div align = "center"><img src = "Images/featurebranchWF.png" width = "600" height = "300"></div>
 
     - #### Gitflow workflow
-        Flujo de trabajo usado para el desarrollo de proyectos grandes, se caracteriza por definir unas ramas por defecto:
+        Flujo de trabajo usado para el desarrollo de proyectos grandes, se caracteriza por definir unas determinadas ramas por defecto:
 
         - ##### Main o Master
             Rama en la que se ubican las versiones lanzadas al usuario final.
@@ -118,7 +125,7 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
         - ##### Feature
             Ramas (existe una rama Feature por cada caracteristica en desarrollo) empleadas para el desarrollo de una caracteristica, estas se integran a la rama Develop.
         
-        <div align = "center"><img src = "Images/GitflowWF.png" width = "600" height = "300"></div>
+        <div align = "center"><img src = "Images/GitflowWF1.png" width = "600" height = "450"></div>
     
     - #### Forking workflow
         Flujo de trabajo en el cual cada colaborador realiza una copia del proyecto completo, la cual se convierte en su repositorio personal público, una vez posee dicha copia, procede a realizar un git clone del repositorio en su máquina local para realizar diferentes cambios. Una vez el colaborador termina su trabajo realiza un push a su repositorio personal y posteriormente realiza un pull request al proyecto original para que sus cambios sean aceptados o rechazados. Para mantenerse al día con los cambios realizados en la versión oficial del proyecto, cada colaborador tiene otro remote que apunta al repositorio original a parte del que tienen apuntando a su copia del proyecto.
