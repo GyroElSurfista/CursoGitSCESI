@@ -95,9 +95,13 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
 
     - #### Basic workflow
         Se usa solamente la rama master para realizar los diferentes commits, es recomendado para proyectos pequeños e individuales.
+
+        <div align = "center"><img src = "Images/basicWF.png" width = "600" height = "300"></div>
     
     - #### Feature branch workflow
         Flujo de trabajo en el cual se establece una rama para cada carácteristica nueva que se encuentre en desarrollo, es recomendado para trabajar en conjunto con otras personas en proyectos pequeños.
+
+        <div align = "center"><img src = "Images/featurebranchWF.png" width = "600" height = "300"></div>
 
     - #### Gitflow workflow
         Flujo de trabajo usado para el desarrollo de proyectos grandes, se caracteriza por definir unas ramas por defecto:
@@ -113,6 +117,10 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
 
         - ##### Feature
             Ramas (existe una rama Feature por cada caracteristica en desarrollo) empleadas para el desarrollo de una caracteristica, estas se integran a la rama Develop.
+        
+        <div align = "center"><img src = "Images/GitflowWF.png" width = "600" height = "300"></div>
     
     - #### Forking workflow
-        Flujo de trabajo en el cual se realiza una 
+        Flujo de trabajo en el cual cada colaborador realiza una copia del proyecto completo, la cual se convierte en su repositorio personal público, una vez posee dicha copia, procede a realizar un git clone del repositorio en su máquina local para realizar diferentes cambios. Una vez el colaborador termina su trabajo realiza un push a su repositorio personal y posteriormente realiza un pull request al proyecto original para que sus cambios sean aceptados o rechazados. Para mantenerse al día con los cambios realizados en la versión oficial del proyecto, cada colaborador tiene otro remote que apunta al repositorio original a parte del que tienen apuntando a su copia del proyecto.
+
+        <div align = "center"><img src = "Images/ForkingWF.png" width = "400" height = "300"></div>
