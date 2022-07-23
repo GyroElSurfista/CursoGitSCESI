@@ -96,6 +96,54 @@ Git es un sistema de control de versiones que permite registrar los diferentes c
     git merge --no-ff <rama>
     ~~~~
 
+- ### Repositorios remotos
+
+    Un repositorio remoto es aquel que se encuentra hosteado en un servidor de internet. Los repositorios remotos permiten que colaboradores de diferentes partes del mundo puedan desarrollar un proyecto. Existen diferentes servicios de repositorios remotos, los más populares son:
+
+    - #### Github
+    - #### BitBucket
+    - #### GitLab
+
+    <div align = "center"><img src = "Images/reposRemotos.jpg" width = "600" height = "300"></div>
+
+    Para poder obtener una copia de un repositorio remoto en una máquina local, se debe crear un directorio para el proyecto que se desee replicar y posteriormente usar el siguiente comando:
+
+    ~~~~
+    git clone <URL repositorio remoto>
+    ~~~~
+
+    Dicha acción descargará los archivos del repositorio y agregará la dirección del mismo a la lista de repositorios remotos con el nombre "origin".
+
+    Para poder establecer un "puntero" a un repositorio remoto se debe usar el comando:
+
+    ~~~~
+    git remote add <nombre rama> <URL repositorio remoto>
+    ~~~~
+
+    Esta acción agregará el repositorio a la lista de remotos.
+
+    Para poder ver la lista de repositorios remotos agregados se debe usar el siguiente comando:
+
+    ~~~~
+    git remote -v
+    ~~~~
+
+    Si se desea enviar los cambios realizados localmente a un repositorio remoto (subir una rama) se debe usar el siguiente comando :
+
+    ~~~~
+    git push <nombre remoto> <rama local>
+    ~~~~
+
+    Si la rama local tiene el mismo nombre que una rama del repositorio remoto se realizará un merge, caso contrario se agregará.
+
+    Para descargar una rama presente en un repositorio remoto se debe usar el siguiente comando:
+
+    ~~~~
+    git  pull <nombre remoto> <rama remota>
+    ~~~~
+
+
+
 - ### Flujos de trabajo 
     
     Un flujo de trabajo es un conjunto de reglas que se siguen para desarrollar un proyecto de manera ordenada y eficiente haciendo uso de Git.
